@@ -2,7 +2,6 @@ import { Card, Text } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
 const BadgerNewsItemCard = (props) => {
-    // API requirement: images are hosted separately on GitHub
     const imgBase = "https://raw.githubusercontent.com/CS571-S26/hw8-api-static-content/main/";
 
     return (
@@ -19,7 +18,7 @@ const styles = StyleSheet.create({
     card: {
         margin: 10,
         backgroundColor: 'white',
-        elevation: 4 // Adds a nice shadow on Android
+        elevation: 4
     },
     title: {
         marginTop: 10,

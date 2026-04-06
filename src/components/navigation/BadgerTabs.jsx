@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
-import BadgerNewsStack from './BadgerNewsStack'; // This is the one we want!
+import BadgerNewsStack from './BadgerNewsStack';
 import BadgerPreferencesScreen from '../screens/BadgerPreferencesScreen';
 
 const BadgerTab = createBottomTabNavigator();
@@ -23,11 +23,11 @@ function BadgerTabs() {
                 tabBarInactiveTintColor: 'gray',
             })}
         >
-            {/* CHANGE THIS LINE: Use BadgerNewsStack instead of BadgerNewsScreen */}
+            {/*Using BadgerNewsStack instead of BadgerNewsScreen */}
             <BadgerTab.Screen 
                 name="News" 
                 component={BadgerNewsStack} 
-                options={{ headerShown: false }} // We hide this so we only see the Stack's header
+                options={{ headerShown: false }}
             />
             
             <BadgerTab.Screen 

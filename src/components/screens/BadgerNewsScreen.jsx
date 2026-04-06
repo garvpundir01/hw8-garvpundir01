@@ -6,7 +6,6 @@ import BadgerPreferencesContext from "../../contexts/BadgerPreferencesContext";
 function BadgerNewsScreen(props) {
     const [articles, setArticles] = useState([]);
     
-    // Consume the preferences from context
     const [prefs] = useContext(BadgerPreferencesContext);
 
     useEffect(() => {
@@ -32,9 +31,6 @@ function BadgerNewsScreen(props) {
         });
     };
 
-    // Filter logic: Keep article only if EVERY tag it has is 'true' in our preferences
-    // Alternatively, if the requirement is "at least one tag must be true", 
-    // use: art.tags.some(tag => prefs[tag])
     const displayableArticles = articles.filter(art => 
         art.tags.every(tag => prefs[tag] === true || prefs[tag] === undefined)
     );

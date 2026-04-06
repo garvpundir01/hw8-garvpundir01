@@ -10,7 +10,6 @@ function BadgerArticleDetailScreen({ route }) {
 
     useEffect(() => {
         setLoading(true);
-        // Reset animation value so it re-occurs if the user re-visits
         fadeAnim.setValue(0);
 
         fetch(`https://cs571api.cs.wisc.edu/rest/s26/hw8/article?id=${fullArticleId}`, {

@@ -7,7 +7,6 @@ import BadgerPreferencesContext from './src/contexts/BadgerPreferencesContext';
 export default function App() {
   const [prefs, setPrefs] = useState({});
 
-  // Fetch unique tags initially to set all to 'true' by default
   useEffect(() => {
     fetch('https://cs571api.cs.wisc.edu/rest/s26/hw8/articles', {
       headers: { "X-CS571-ID": "bid_976288979de48a696dddc79c99655c8b217013457581e21dc8ffa145c22acea8" }
